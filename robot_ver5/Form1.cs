@@ -356,7 +356,7 @@ namespace robot_ver5
       //управление роботов без джойстика
         private void trackBar_8_Scroll(object sender, EventArgs e)
         {
-            robot.Connect();
+            //robot.Connect();
 
             size = tbSize.Value;
             pitch = (float)(tbPitch.Value * Math.PI / 180);
@@ -379,7 +379,7 @@ namespace robot_ver5
             var q1 = Utils.RadiansToDegrees(q[3]).ToString();
             var q4 = Utils.RadiansToDegrees(q[7]).ToString();
             var q5 = d5.ToString("F2");
-            robot.UrologGo(q1, q4, q5);
+            //robot.UrologGo(q1, q4, q5);
                        
             var positionU = robot.UrologArm.FK(q);
      
@@ -387,7 +387,7 @@ namespace robot_ver5
 
             pictureBox2.Invalidate();
             Invalidate();
-            robot.Disconnect();
+           // robot.Disconnect();
         }
     }
      
