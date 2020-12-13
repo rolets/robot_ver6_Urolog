@@ -187,7 +187,7 @@ namespace robot_ver5
             var q1 = Utils.RadiansToDegrees(q[3]).ToString("F2");
             var q4 = Utils.RadiansToDegrees(q[7]).ToString("F2");
             var q5 = d5.ToString("F2");
-            robot.UrologGo(q1, q4, q5); // отправка команды на робота
+            robot.UrologGo2(q1, q4, q5); // отправка команды на робота
 
             var positionU = robot.UrologArm.FK(q);
             trackBar_8.Value = (int)Utils.RadiansToDegrees(d4);
